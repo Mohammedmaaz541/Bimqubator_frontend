@@ -1,0 +1,138 @@
+.legalPage {
+  min-height: 100vh;
+  padding: clamp(44px, 5vw, 68px) 0 clamp(76px, 9vw, 116px);
+  overflow-x: hidden;
+  background: #f7f9fc;
+  color: #101927;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: min(100% - 48px, 920px);
+  margin-inline: auto;
+}
+
+.header {
+  margin-bottom: clamp(28px, 4vw, 42px);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  margin-bottom: 18px;
+  padding: 7px 11px;
+  border: 1px solid #dce8f8;
+  background: #edf4ff;
+  color: #2464c4;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: #101927;
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: -0.07em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.titleAccent {
+  color: #2874e8;
+}
+
+.article {
+  position: relative;
+  padding: clamp(24px, 5vw, 48px);
+  border: 1px solid #e0e6ee;
+  background: #fff;
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.06);
+}
+
+.article::before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 88px;
+  height: 3px;
+  background: #2874e8;
+  content: "";
+}
+
+.updatedAt {
+  margin: 0 0 30px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e5eaf0;
+  color: #7c899a;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.sections {
+  display: grid;
+  gap: 28px;
+}
+
+.section {
+  min-width: 0;
+}
+
+.sectionTitle {
+  margin: 0 0 10px;
+  color: #172335;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 850;
+  letter-spacing: -0.035em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.sectionBody {
+  margin: 0;
+  color: #59677a;
+  font-size: clamp(14px, 1.4vw, 16px);
+  font-weight: 400;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .legalPage {
+    padding-top: 40px;
+  }
+
+  .container {
+    width: min(100% - 36px, 520px);
+  }
+
+  .eyebrow {
+    margin-bottom: 15px;
+  }
+
+  .title {
+    font-size: clamp(2.35rem, 11vw, 3.8rem);
+    line-height: 1.03;
+  }
+
+  .article {
+    padding: 25px 20px;
+  }
+
+  .updatedAt {
+    margin-bottom: 24px;
+    padding-bottom: 15px;
+    font-size: 9px;
+  }
+
+  .sections {
+    gap: 23px;
+  }
+}

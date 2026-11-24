@@ -1,0 +1,232 @@
+.heroGrid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(185, 210, 241, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(185, 210, 241, 0.055) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(90deg, transparent, #000 22%, #000 85%, transparent);
+  animation: gridAppear 900ms ease-out both;
+}
+
+.heroGlow {
+  position: absolute;
+  z-index: -1;
+  top: 8%;
+  right: -14%;
+  width: min(62vw, 800px);
+  aspect-ratio: 1;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.09), transparent 68%);
+  animation: glowBreathe 7s ease-in-out infinite;
+}
+
+.heroCopy {
+  animation: copyReveal 700ms 100ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.badgeDot {
+  animation: dotPulse 2.8s ease-out infinite;
+}
+
+.titleAccent {
+  position: relative;
+  width: fit-content;
+}
+
+.titleAccent::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.12em;
+  left: 0;
+  height: 2px;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, #2563eb, rgba(34, 211, 238, 0.5), transparent);
+  animation: titleUnderline 850ms 650ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+.heroVisual {
+  isolation: isolate;
+  animation: imageFloat 8s 1s ease-in-out infinite;
+}
+
+.heroVisual::before {
+  position: absolute;
+  z-index: -1;
+  inset: 12% 8%;
+  content: "";
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(37, 99, 235, 0.12), transparent 70%);
+  filter: blur(1.5rem);
+  animation: visualGlow 5s ease-in-out infinite;
+}
+
+.imageFrame {
+  opacity: 0;
+  animation: frameReveal 700ms 350ms ease-out forwards;
+}
+
+.imageStage {
+  opacity: 0;
+  animation: imageReveal 850ms 180ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+.imageSweep {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform: translateX(-120%);
+  background: linear-gradient(
+    112deg,
+    transparent 38%,
+    rgba(255, 255, 255, 0.36) 48%,
+    transparent 58%
+  );
+  animation: imageSweep 8s 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) infinite;
+}
+
+@keyframes gridAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes glowBreathe {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes copyReveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dotPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.28);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+@keyframes titleUnderline {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes imageFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes visualGlow {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes frameReveal {
+  from {
+    opacity: 0;
+    transform: translate(4px, -4px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes imageReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes imageSweep {
+  0%,
+  12%,
+  100% {
+    opacity: 0;
+    transform: translateX(-120%);
+  }
+  18% {
+    opacity: 1;
+  }
+  34% {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+}
+
+@media (max-width: 767px) {
+  .heroGlow {
+    right: -38%;
+    width: 78vw;
+  }
+
+  .imageSweep {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroGrid,
+  .heroGlow,
+  .heroCopy,
+  .badgeDot,
+  .titleAccent::after,
+  .heroVisual,
+  .heroVisual::before,
+  .imageFrame,
+  .imageStage,
+  .imageSweep {
+    animation: none !important;
+  }
+
+  .heroCopy,
+  .imageFrame,
+  .imageStage {
+    opacity: 1;
+    transform: none;
+  }
+}
