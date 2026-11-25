@@ -70,6 +70,7 @@
 
 .primaryButton {
   border: 1px solid #2563eb;
+  
   background: #2563eb;
   color: #fff;
   box-shadow: 0 8px 26px rgba(37, 99, 235, 0.2);
@@ -78,6 +79,7 @@
     background-color 250ms ease,
     color 250ms ease,
     box-shadow 250ms ease;
+    border-radius: 8px;
 }
 
 .primaryButton:hover {
@@ -91,10 +93,12 @@
 .secondaryButton:focus-visible {
   outline: 2px solid #2563eb;
   outline-offset: 4px;
+  
 }
 
 .secondaryButton {
   border: 1px solid #93c5fd;
+  border-radius: 12px;
   color: #1d4ed8;
   transition:
     border-color 250ms ease,

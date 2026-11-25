@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         <Toaster 
           position="top-right" 
           toastOptions={{
-            className: 'border-2 border-gray-900 rounded-none shadow-[4px_4px_0_0_rgba(17,24,39,1)] text-[10px] font-black uppercase tracking-widest bg-white text-gray-900',
+            className: 'border border-gray-200 rounded-xl shadow-lg text-[10px] font-black uppercase tracking-widest bg-white text-gray-900',
             duration: 4000,
           }} 
         />

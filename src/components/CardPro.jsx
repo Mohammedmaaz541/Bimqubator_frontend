@@ -27,13 +27,15 @@ function CardPro({ project, featuredLayout = false }) {
     <div
       onClick={() => router.push(`/projects/${project.project_id}`)}
       className={`group flex h-full cursor-pointer flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_12px_36px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-[0_20px_48px_rgba(15,23,42,0.14)] ${
-        featuredLayout ? "md:grid md:grid-cols-[1.15fr_0.85fr]" : ""
+        featuredLayout ? "lg:grid lg:grid-cols-[1.15fr_0.85fr]" : ""
       }`}
     >
       {/* Project Image */}
       <div
-        className={`relative h-56 overflow-hidden bg-slate-100 ${
-          featuredLayout ? "md:h-full md:min-h-[390px]" : ""
+        className={`relative overflow-hidden bg-slate-100 ${
+          featuredLayout
+            ? "h-64 sm:h-72 lg:h-full lg:min-h-[390px]"
+            : "h-56"
         }`}
       >
         {images.length > 0 ? <Image
@@ -71,7 +73,7 @@ function CardPro({ project, featuredLayout = false }) {
 
       <div
         className={`flex flex-grow flex-col p-6 md:p-8 ${
-          featuredLayout ? "justify-center md:p-10 lg:p-12" : ""
+          featuredLayout ? "justify-center md:p-8 lg:p-10 xl:p-12" : ""
         }`}
       >
         <h4

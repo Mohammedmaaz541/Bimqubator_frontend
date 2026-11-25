@@ -19,6 +19,7 @@ export default function Footer() {
   const quickLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about-us" },
+    { name: "Services",  href: "/solution" },
     { name: "Contact Us", href: "/contact-us" },
     { name: "Join Our Team", href: "/careers" },
   ];
@@ -94,15 +95,15 @@ export default function Footer() {
         </section>
 
         <section aria-labelledby="footer-services" className="min-w-0">
-          <h2 id="footer-services" className={sectionHeadingClass}>
+          {/* <h2 id="footer-services" className={sectionHeadingClass}>
             <Link
               href="/services"
               className="transition-colors duration-200 hover:text-blue-400 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400"
             >
               Our Services
             </Link>
-          </h2>
-          <h3 className={`${sectionHeadingClass} mb-4 mt-2 text-slate-400`}>
+          </h2> */}
+          <h3 className={sectionHeadingClass}>
             Partners
           </h3>
           <ul className="space-y-3">

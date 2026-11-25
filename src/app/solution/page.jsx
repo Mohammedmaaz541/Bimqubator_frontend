@@ -65,7 +65,7 @@ export default async function Services({ searchParams }) {
                 </p>
               </div>
 
-              <div className={`${styles.heroVisual} relative mx-auto w-full max-w-[680px]`}>
+              <div className={`${styles.heroVisual} relative mx-auto w-full max-w-[680px]` }>
                 <div aria-hidden="true" className={`${styles.imageFrame} absolute -bottom-2 -right-2 left-2 top-2 border-b-[3px] border-r-[3px] border-blue-600`} />
                 <div className={`${styles.imageStage} relative z-10 aspect-[1.4] overflow-hidden bg-white`}>
                   <Image

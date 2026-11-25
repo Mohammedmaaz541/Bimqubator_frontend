@@ -133,16 +133,16 @@ export default function Home() {
                   design, construction, and facility management stages.
                 </p>
 
-                <div className="hero-actions flex flex-wrap gap-3 sm:gap-4">
+                <div className="hero-actions flex flex-wrap gap-3 sm:gap-4  ">
                   <Link
                     href="/solution"
-                    className="inline-flex min-h-12 items-center justify-center rounded-sm border border-blue-700 bg-blue-700 px-6 py-3 text-[10px] font-bold uppercase tracking-[0.13em] text-white shadow-[0_10px_24px_rgba(29,78,216,0.18)] transition-all duration-300 hover:-translate-y-1 hover:border-blue-800 hover:bg-blue-800 hover:shadow-[0_16px_30px_rgba(29,78,216,0.24)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700 sm:min-h-14 sm:px-7"
+                    className="inline-flex min-h-12 items-center justify-center rounded-sm border border-blue-700 bg-blue-700 px-6 py-3 text-[10px] font-bold uppercase tracking-[0.13em] text-white shadow-[0_10px_24px_rgba(29,78,216,0.18)] transition-all duration-300 hover:-translate-y-1 hover:border-blue-800 hover:bg-blue-800 hover:shadow-[0_16px_30px_rgba(29,78,216,0.24)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700 sm:min-h-14 sm:px-7 rounded-xl"
                   >
                     Services
                   </Link>
                   <Link
                     href="/contact-us"
-                    className="inline-flex min-h-12 items-center justify-center rounded-sm border border-slate-300 bg-white/80 px-6 py-3 text-[10px] font-bold uppercase tracking-[0.13em] text-slate-800 shadow-[0_8px_20px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-900 hover:bg-slate-900 hover:text-white hover:shadow-[0_14px_28px_rgba(15,23,42,0.16)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-slate-700 sm:min-h-14 sm:px-7"
+                    className="inline-flex min-h-12 items-center justify-center rounded-sm border border-slate-300 bg-white/80 px-6 py-3 text-[10px] font-bold uppercase tracking-[0.13em] text-slate-800 shadow-[0_8px_20px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-900 hover:bg-slate-900 hover:text-white hover:shadow-[0_14px_28px_rgba(15,23,42,0.16)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-slate-700 sm:min-h-14 sm:px-7 rounded-xl"
                   >
                     Contact Us
                   </Link>
@@ -163,7 +163,7 @@ export default function Home() {
                   className="pointer-events-none absolute -right-2 -top-3 h-14 w-14 border-r border-t border-blue-600/70 sm:-right-4 sm:-top-4 sm:h-20 sm:w-20"
                 />
 
-                <div className="hero-image-float relative z-10">
+                <div className="hero-image-float relative z-10 rounded-2xl overflow-hidden">
                   <div className="hero-image-tilt">
                     <div className="hero-image-frame relative aspect-[3/2] overflow-hidden border border-white bg-white p-1.5 shadow-[0_28px_70px_rgba(15,23,42,0.16)] sm:p-2">
                       <Image
@@ -577,7 +577,7 @@ export default function Home() {
                   return (
                     <div key={i} className={`relative h-full w-full ${stage.orderClasses}`}>
                       {stage.lineElement}
-                      <article className="group relative z-10 flex h-full w-full flex-col overflow-hidden rounded-t-2xl border border-slate-200/80 bg-white shadow-[0_12px_34px_rgba(15,23,42,0.06)] transition-all duration-500 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_22px_48px_rgba(15,23,42,0.12)]">
+                      <article className="group relative z-10 flex h-full w-full flex-col overflow-hidden rounded-t-2xl border border-slate-200/80 bg-white shadow-[0_12px_34px_rgba(15,23,42,0.06)] transition-all duration-500 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_22px_48px_rgba(15,23,42,0.12)] rounded-xl">
                         <div className="relative aspect-[16/9] w-full shrink-0 overflow-hidden bg-white">
                           <Image
                             src={stage.img}
@@ -738,7 +738,14 @@ export default function Home() {
                   ]
                 },
               ].map((stage, i) => (
-                <article key={i} className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white p-6 shadow-[6px_6px_0_rgba(37,99,235,0.2)] transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-200 hover:shadow-[9px_9px_0_rgba(37,99,235,0.3)] motion-reduce:transform-none motion-reduce:transition-none md:p-7">
+                <article
+                  key={i}
+                  className={`group relative flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white p-6 shadow-[6px_6px_0_rgba(37,99,235,0.2)] transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-200 hover:shadow-[9px_9px_0_rgba(37,99,235,0.3)] motion-reduce:transform-none motion-reduce:transition-none md:p-7 ${
+                    i === 2
+                      ? "sm:col-span-2 sm:mx-auto sm:w-1/2 lg:col-span-1 lg:mx-0 lg:w-auto"
+                      : ""
+                  }`}
+                >
                   <div aria-hidden="true" className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-blue-600 transition-transform duration-500 group-hover:scale-x-100" />
                   <div aria-hidden="true" className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-blue-100/70 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
@@ -842,7 +849,7 @@ export default function Home() {
                   "Revit", "Navisworks", "Revizto", "Enscape", "COBie", "pyRevit", "BIM 360", "Dynamo",
                   "Revit", "Navisworks", "Revizto", "Enscape", "COBie", "pyRevit", "BIM 360", "Dynamo"
                 ].map((tech, i) => (
-                  <div key={i} className="group relative bg-white border border-gray-200 px-6 md:px-8 py-3 md:py-4 transition-all duration-300 shadow-[3px_3px_0_0_rgba(229,231,235,1)] hover:shadow-[3px_3px_0_0_rgba(37,99,235,1)] hover:-translate-y-0.5 cursor-default flex items-center justify-center min-w-[120px] md:min-w-[140px] shrink-0">
+                  <div key={i} className="group relative bg-white border border-gray-200 px-6 md:px-8 py-3 md:py-4 transition-all duration-300 shadow-[3px_3px_0_0_rgba(229,231,235,1)] hover:shadow-[3px_3px_0_0_rgba(37,99,235,1)] hover:-translate-y-0.5 cursor-default flex items-center justify-center min-w-[120px] md:min-w-[140px] shrink-0 rounded-xl">
                     <span className="text-gray-900 font-black text-base md:text-lg uppercase tracking-tighter group-hover:text-blue-600 transition-colors">{tech}</span>
                     {/* Technical Rivets */}
                     <div className="absolute top-1.5 left-1.5 w-1 h-1 bg-gray-200 group-hover:bg-blue-600 transition-colors rounded-full"></div>

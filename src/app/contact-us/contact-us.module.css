@@ -51,6 +51,7 @@
   position: relative;
   padding: clamp(24px, 4vw, 46px);
   border: 1px solid #dfe5ec;
+  border-radius: var(--radius-surface);
   background: #fff;
   box-shadow: 0 12px 36px rgba(15, 23, 42, 0.055);
 }
@@ -112,7 +113,7 @@
 .textarea {
   width: 100%;
   border: 1px solid #d4dce6;
-  border-radius: 3px;
+  border-radius: 10px;
   outline: 0;
   background: #fbfcfe;
   color: #101927;
@@ -152,6 +153,7 @@
   min-height: 56px;
   padding: 14px 20px;
   border: 0;
+  border-radius: 12px;
   background: #2874e8;
   color: #fff;
   font-size: 11px;
@@ -191,6 +193,7 @@
 .infoCard {
   padding: clamp(24px, 3vw, 34px);
   border: 1px solid #dfe5ec;
+  border-radius: var(--radius-surface);
   background: #fff;
   box-shadow: 0 12px 36px rgba(15, 23, 42, 0.045);
 }
@@ -223,6 +226,7 @@
   height: 40px;
   flex: 0 0 auto;
   place-items: center;
+  border-radius: 10px;
   background: #edf4ff;
   color: #2874e8;
   transition: background 220ms ease, color 220ms ease;
@@ -275,6 +279,7 @@
   position: relative;
   overflow: hidden;
   padding: clamp(24px, 3vw, 34px);
+  border-radius: var(--radius-surface);
   background: #101927;
   color: #fff;
 }
@@ -307,6 +312,7 @@
 .partnerTag {
   padding: 8px 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.04);
   color: #e2e8f0;
   font-size: 9px;

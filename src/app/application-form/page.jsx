@@ -136,14 +136,14 @@ const ApplicationFormContent = () => {
         )}
 
         {/* HEADER SECTION */}
-        <div className="mb-12 text-center border-2 border-gray-100 p-8 shadow-[4px_4px_0_0_rgba(243,244,246,1)] bg-white">
+        <div className="mb-12 text-center rounded-2xl border border-gray-100 p-8 shadow-[0_12px_36px_rgba(15,23,42,0.07)] bg-white">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 leading-tight tracking-tighter uppercase mb-6">
             Application <span className="text-blue-600">Form.</span>
           </h1>
           {job && (
             <div className="flex flex-col items-center gap-3">
               <span className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">Applying For</span>
-              <span className="px-4 py-2 bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-widest border-2 border-blue-100">
+              <span className="px-4 py-2 rounded-full bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-widest border border-blue-100">
                 {job.title}
               </span>
             </div>
@@ -151,7 +151,7 @@ const ApplicationFormContent = () => {
         </div>
 
         {/* APPLICATION FORM */}
-        <div className="bg-white border-2 border-gray-100 p-6 md:p-10 shadow-[6px_6px_0_0_rgba(243,244,246,1)] md:shadow-[8px_8px_0_0_rgba(243,244,246,1)]">
+        <div className="rounded-2xl bg-white border border-gray-100 p-6 md:p-10 shadow-[0_16px_44px_rgba(15,23,42,0.08)]">
           <h3 className="text-xl md:text-2xl font-black text-gray-900 uppercase mb-8 md:mb-10 tracking-tight flex items-center gap-4">
             <div className="w-3 h-3 bg-blue-600 rotate-45"></div>
             Personal Information
@@ -283,7 +283,7 @@ const ApplicationFormContent = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 md:py-5 bg-blue-600 text-white font-black uppercase tracking-[0.2em] text-[10px] md:text-xs hover:bg-gray-900 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 active:bg-gray-800 disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
+                className="w-full rounded-xl py-4 md:py-5 bg-blue-600 text-white font-black uppercase tracking-[0.2em] text-[10px] md:text-xs hover:bg-gray-900 transition-all shadow-lg shadow-blue-900/10 hover:shadow-xl hover:-translate-y-0.5 active:bg-gray-800 disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
               >
                 {isSubmitting ? 'Submitting Application...' : 'Submit Application'}
               </button>

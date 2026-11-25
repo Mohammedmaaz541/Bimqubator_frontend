@@ -11,7 +11,7 @@ const CardSol = ({ item, index, getImageUrl }) => {
   }
 
   return (
-    <div className="group relative bg-white transition-all border-2 border-blue-600 duration-300 shadow-[4px_4px_0_0_rgba(37,99,235,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 flex flex-col">
+    <div className="group relative rounded-2xl bg-white transition-all border-2 border-blue-600 duration-300 shadow-[4px_4px_0_0_rgba(37,99,235,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 flex flex-col overflow-hidden">
       {/* Image Frame */}
       <div className="w-full h-40 sm:h-48 relative border-b-2 border-blue-600 overflow-hidden">
         {item.image ? <img
