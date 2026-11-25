@@ -91,7 +91,7 @@ export default function Navbar() {
             aria-current={pathname === "/solution" ? "page" : undefined}
             className={navLinkClass("/solution")}
           >
-            Our solution
+            Services
             {activeIndicator("/solution")}
           </Link>
 

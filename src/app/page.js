@@ -138,7 +138,7 @@ export default function Home() {
                     href="/solution"
                     className="inline-flex min-h-12 items-center justify-center rounded-sm border border-blue-700 bg-blue-700 px-6 py-3 text-[10px] font-bold uppercase tracking-[0.13em] text-white shadow-[0_10px_24px_rgba(29,78,216,0.18)] transition-all duration-300 hover:-translate-y-1 hover:border-blue-800 hover:bg-blue-800 hover:shadow-[0_16px_30px_rgba(29,78,216,0.24)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700 sm:min-h-14 sm:px-7"
                   >
-                    Our Solution
+                    Services
                   </Link>
                   <Link
                     href="/contact-us"
